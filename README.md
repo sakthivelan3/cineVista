@@ -54,4 +54,4 @@ Follow these steps to run the project locally:
 
 ### Deployment
 
-- Deployed the project with the help of vercel [cine-vista](https://cine-vista.vercel.app/) {:target="_blank"}
+Deployed the project with the help of Vercel [cine-vista](https://cine-vista.vercel.app/){:target="_blank"}.
