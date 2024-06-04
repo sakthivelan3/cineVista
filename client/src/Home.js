@@ -58,7 +58,7 @@ const Home = () => {
   }, []);
 
   const getRandomMovies = async () => {
-    const url = `http://www.omdbapi.com/?apikey=6ea4ba50&type=series&s=popular`;
+    const url = `https://www.omdbapi.com/?apikey=6ea4ba50&type=series&s=popular`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
@@ -70,7 +70,7 @@ const Home = () => {
       const moviesWithDetails = await Promise.all(
         randomMovies.map(async (movie) => {
           const detailsResponse = await fetch(
-            `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=6ea4ba50`
+            `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=6ea4ba50`
           );
           const detailsJson = await detailsResponse.json();
           return detailsJson;
@@ -82,7 +82,7 @@ const Home = () => {
 
   const getMovieDetails = async (query) => {
     if (query) {
-      let url = `http://www.omdbapi.com/?apikey=6ea4ba50&type=series&s=${query}&r=json`;
+      let url = `https://www.omdbapi.com/?apikey=6ea4ba50&type=series&s=${query}&r=json`;
       const response = await fetch(url);
       const responseJson = await response.json();
 
@@ -90,7 +90,7 @@ const Home = () => {
         const moviesWithDetails = await Promise.all(
           responseJson.Search.map(async (movie) => {
             const detailsResponse = await fetch(
-              `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=6ea4ba50`
+              `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=6ea4ba50`
             );
             const detailsJson = await detailsResponse.json();
             return detailsJson;
