@@ -6,7 +6,7 @@ import PrivateRoute from "./component/PrivateRoute";
 import { auth } from "./firebase"; // Assuming this imports your Firebase configuration
 import { onAuthStateChanged } from "firebase/auth"; // Importing onAuthStateChanged correctly
 import Home from "./Home";
-import "./App.css";
+import "./Styles/App.css";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
