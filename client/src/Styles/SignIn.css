@@ -1,0 +1,43 @@
+.SignIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #221F1F;
+  }
+  
+  .SignInBox {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .SignInTitle {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #221F1F;
+  }
+  
+  .SignInInput {
+    margin-bottom: 15px;
+  }
+  
+  .SignInButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust this margin as needed */
+  }
+  
+  .SignInButton {
+    margin: 0 10px; /* Add margin between the buttons */
+  }
+  
+  .SignInLink {
+    margin-top: 10px;
+    text-align: center;
+    color: #221F1F;
+  }
+  

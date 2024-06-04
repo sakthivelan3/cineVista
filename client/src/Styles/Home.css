@@ -1,0 +1,99 @@
+.Homepage {
+    background: #221F1F;
+    color: white;
+}
+/* Home.css */
+.sign-out-button {
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    outline: none;
+    text-align: center;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Mode Button Styles */
+.light-mode .sign-out-button {
+    background-color: #1976d2;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .sign-out-button:hover {
+    background-color: #1565c0;
+}
+
+/* Dark Mode Button Styles */
+.dark-mode .sign-out-button {
+    background-color: #263238;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .sign-out-button:hover {
+    background-color: #37474f;
+}
+/* Home.css */
+
+.create-list-button {
+    padding: 6px 12px; /* Decreased padding */
+    font-size: 14px; /* Decreased font size */
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    outline: none;
+    text-align: center;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Mode Button Styles */
+.light-mode .create-list-button {
+    background-color: #2196f3; /* Light blue color */
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .create-list-button:hover {
+    background-color: #1976d2; /* Darker shade of light blue on hover */
+}
+
+/* Dark Mode Button Styles */
+.dark-mode .create-list-button {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .create-list-button:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar {
+    width: 5px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 60px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}

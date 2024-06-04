@@ -1,0 +1,16 @@
+.Heading {
+    /* Default background color */
+    color: #333; /* Default text color */
+}
+
+.dark-mode .Heading {
+    background-color: #333; /* Dark mode background color */
+    color: #f0f0f0; /* Dark mode text color */
+}
+
+.light-mode .Heading {
+     /* Light mode background color */
+    color: #333; /* Light mode text color */
+}
+
+
