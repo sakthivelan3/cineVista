@@ -4,7 +4,7 @@ This project is a movie library web application that allows users to search for 
 
 ### Deployment
 
-- Deployed the project with the help of Vercel [cine-vista](https://cine-vista.vercel.app/)
+- Deployed the project with the help of Vercel [click here](https://cine-vista.vercel.app/)
 
 
 ## Features
