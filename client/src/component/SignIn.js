@@ -40,55 +40,62 @@ const SignIn = () => {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
+      // Access user info from 'result.user' if needed
       navigate("/");
     } catch (error) {
-      toast.error("Google sign-in failed. Please try again.");
+      switch (error.code) {
+        case "auth/popup-closed-by-user":
+        case "auth/cancelled-popup-request":
+          toast.error("Google sign-in was cancelled.");
+          break;
+        default:
+          toast.error("Google sign-in failed. Please try again.");
+      }
     }
   };
 
   return (
     <div className="SignIn">
-  <Box className="SignInBox">
-    <Typography variant="h5" className="SignInTitle" gutterBottom>
-      Welcome Back!
-    </Typography>
-    <TextField
-      type="email"
-      label="Email"
-      variant="outlined"
-      fullWidth
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      className="SignInInput"
-      margin="normal"
-      required
-    />
-    <TextField
-      type="password"
-      label="Password"
-      variant="outlined"
-      fullWidth
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      className="SignInInput"
-      margin="normal"
-      required
-    />
-    <div className="SignInButtonContainer">
-    <Button variant="contained" color="primary" className="SignInButton" onClick={handleSignIn}>
-      Sign In
-    </Button>
-    <div style={{ marginRight: '10px' }} /> {/* Add spacing */}
-    <Button variant="contained" color="secondary" className="SignInButton" onClick={handleGoogleSignIn}>
-      Sign In with Google
-    </Button>
-  </div>
-    <div style={{marginTop: '8px'}} />
-    <Typography variant="body2" className="SignInLink">
-      Don't have an account? <Link to="/signup">Sign Up</Link>
-    </Typography>
-  </Box>
-</div>
+      <Box className="SignInBox">
+        <Typography variant="h5" className="SignInTitle" gutterBottom>
+          Welcome Back!
+        </Typography>
+        <TextField
+          type="email"
+          label="Email"
+          variant="outlined"
+          fullWidth
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="SignInInput"
+          margin="normal"
+          required
+        />
+        <TextField
+          type="password"
+          label="Password"
+          variant="outlined"
+          fullWidth
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="SignInInput"
+          margin="normal"
+          required
+        />
+        <div className="SignInButtonContainer">
+          <Button variant="contained" color="primary" className="SignInButton" onClick={handleSignIn}>
+            Sign In
+          </Button>
+          <Button variant="contained" color="secondary" className="SignInButton" onClick={handleGoogleSignIn}>
+            Sign In with Google
+          </Button>
+        </div>
+        <div style={{ marginTop: '8px' }} />
+        <Typography variant="body2" className="SignInLink">
+          Don't have an account? <Link to="/signup">Sign Up</Link>
+        </Typography>
+      </Box>
+    </div>
   );
 };
 
