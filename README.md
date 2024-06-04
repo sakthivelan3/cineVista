@@ -2,6 +2,11 @@
 
 This project is a movie library web application that allows users to search for movies, add them to favorites, and create multiple lists of liked movies similar to YouTube playlists.
 
+### Deployment
+
+- Deployed the project with the help of Vercel [cine-vista](https://cine-vista.vercel.app/)
+
+
 ## Features
 
 - User authentication using Firebase Auth.
